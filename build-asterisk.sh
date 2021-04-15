@@ -44,11 +44,18 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --no-i
     xmlstarlet
 
 
-apt-get -y install wget nano vim sox iputils-ping python2.7 python-pip net-tools openssh-server libsox-fmt-mp3 logrotate
+apt-get -y install wget nano vim sox iputils-ping python2.7 python-pip net-tools openssh-server libsox-fmt-mp3 logrotate unixodbc unixodbc-dev gnupg2
 pip install smpplib
 pip install pyst2
 pip install requests
 pip install mysql-connector-python
+pip install psycopg2-binary
+
+echo "deb http://apt.postgresql.org/pub/repos/apt stretch-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+apt-get update
+apt-get -y install odbc-postgresql
+
 #wget https://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mysql-connector-odbc-8.0.17-linux-ubuntu16.04-x86-64bit.tar.gz
 #gunzip mysql-connector-odbc-8.0.17-linux-ubuntu16.04-x86-64bit.tar.gz
 #tar xvf mysql-connector-odbc-8.0.17-linux-ubuntu16.04-x86-64bit.tar
@@ -91,8 +98,11 @@ menuselect/menuselect --disable BUILD_NATIVE menuselect.makeopts
 menuselect/menuselect --enable BETTER_BACKTRACES menuselect.makeopts
 
 # codecs
-#menuselect/menuselect --enable format_mp3 menuselect.makeopts
+menuselect/menuselect --enable format_mp3 menuselect.makeopts
 # menuselect/menuselect --enable codec_silk menuselect.makeopts
+
+# cdr
+menuselect/menuselect --enable cdr_pgsql menuselect.makeopts
 
 # # download more sounds
 # for i in CORE-SOUNDS-EN MOH-OPSOUND EXTRA-SOUNDS-EN; do
