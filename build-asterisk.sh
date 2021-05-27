@@ -56,7 +56,7 @@ echo "deb http://apt.postgresql.org/pub/repos/apt stretch-pgdg main" > /etc/apt/
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 apt-get update
 apt-get -y install odbc-postgresql
-apt-get -y install sngrep
+apt-get -y install sngrep tcpdump
 
 #wget https://dev.mysql.com/get/Downloads/Connector-ODBC/8.0/mysql-connector-odbc-8.0.17-linux-ubuntu16.04-x86-64bit.tar.gz
 #gunzip mysql-connector-odbc-8.0.17-linux-ubuntu16.04-x86-64bit.tar.gz
