@@ -90,7 +90,7 @@ curl -vsL http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/aste
 # 1.5 jobs per core works out okay
 : ${JOBS:=$(( $(nproc) + $(nproc) / 2 ))}
 
-./configure  --with-resample --with-pjproject-bundled
+./configure  --with-resample --with-pjproject-bundled --without-inotify
 make menuselect/menuselect menuselect-tree menuselect.makeopts
 
 # disable BUILD_NATIVE to avoid platform issues
