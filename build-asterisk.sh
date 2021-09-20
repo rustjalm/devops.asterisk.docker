@@ -79,6 +79,11 @@ cp mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit/bin/myodbc-installer /usr
 myodbc-installer -a -d -n "MySQL ODBC 5.3 Driver" -t "Driver=/usr/local/lib/libmyodbc5w.so"
 myodbc-installer -a -d -n "MySQL ODBC 5.3" -t "Driver=/usr/local/lib/libmyodbc5a.so"
 
+#Install codec g729
+wget http://asterisk.hosting.lv/bin/codec_g729-ast130-gcc4-glibc-x86_64-core2.so
+mv codec_g729-ast130-gcc4-glibc-x86_64-core2.so codec_g729.so
+cp codec_g729.so /usr/lib/asterisk/modules
+
 apt-get purge -y --auto-remove
 rm -rf /var/lib/apt/lists/*
 
