@@ -138,6 +138,12 @@ mkdir -p /usr/src/codecs/opus \
   && cp *.so /usr/lib/asterisk/modules/ \
   && cp codec_opus_config-en_US.xml /var/lib/asterisk/documentation/
 
+#Install codec g729
+cd /usr/src
+wget http://asterisk.hosting.lv/bin/codec_g729-ast130-gcc4-glibc-x86_64-core2.so
+mv codec_g729-ast130-gcc4-glibc-x86_64-core2.so codec_g729.so
+cp codec_g729.so /usr/lib/asterisk/modules
+
 mkdir -p /etc/asterisk/ \
          /var/spool/asterisk/fax
 
@@ -171,7 +177,4 @@ rm -rf /var/lib/apt/lists/*
 
 exec rm -f /build-asterisk.sh
 
-#Install codec g729
-wget http://asterisk.hosting.lv/bin/codec_g729-ast130-gcc4-glibc-x86_64-core2.so
-mv codec_g729-ast130-gcc4-glibc-x86_64-core2.so codec_g729.so
-cp codec_g729.so /usr/lib/asterisk/modules
+
