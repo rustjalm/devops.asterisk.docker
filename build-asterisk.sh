@@ -73,13 +73,13 @@ apt-get -y install sngrep tcpdump lame
 #myodbc-installer -a -d -n "MySQL ODBC 8.0" -t "Driver=/usr/local/lib/libmyodbc8a.so"
 
 #wget https://dev.mysql.com/get/Downloads/Connector-ODBC/5.3/mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit.tar.gz
-wget https://github.com/Zhankin/asterisk/raw/master/mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit.tar.gz
-gunzip mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit.tar.gz
-tar xvf mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit.tar
-cp mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit/lib/libmyodbc5* /usr/local/lib
-cp mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit/bin/myodbc-installer /usr/local/bin
-myodbc-installer -a -d -n "MySQL ODBC 5.3 Driver" -t "Driver=/usr/local/lib/libmyodbc5w.so"
-myodbc-installer -a -d -n "MySQL ODBC 5.3" -t "Driver=/usr/local/lib/libmyodbc5a.so"
+# wget https://github.com/Zhankin/asterisk/raw/master/mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit.tar.gz
+# gunzip mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit.tar.gz
+# tar xvf mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit.tar
+# cp mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit/lib/libmyodbc5* /usr/local/lib
+# cp mysql-connector-odbc-5.3.13-linux-debian9-x86-64bit/bin/myodbc-installer /usr/local/bin
+# myodbc-installer -a -d -n "MySQL ODBC 5.3 Driver" -t "Driver=/usr/local/lib/libmyodbc5w.so"
+# myodbc-installer -a -d -n "MySQL ODBC 5.3" -t "Driver=/usr/local/lib/libmyodbc5a.so"
 
 
 apt-get purge -y --auto-remove
