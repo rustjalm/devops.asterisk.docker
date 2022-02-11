@@ -4,7 +4,7 @@ FROM debian:stretch-slim
 
 LABEL maintainer="Andrius Kairiukstis <k@andrius.mobi>"
 
-ENV ASTERISK_VERSION 13-current
+ENV ASTERISK_VERSION 13.38.3
 #ENV ASTERISK_VERSION 13.23.1
 ENV OPUS_CODEC       asterisk-13.0/x86-64/codec_opus-13.0_current-x86_64
 ENV USERPASS **String**
