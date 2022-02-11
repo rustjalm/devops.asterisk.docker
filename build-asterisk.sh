@@ -46,11 +46,12 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends --no-i
 
 apt-get -y install wget nano vim sox iputils-ping python2.7 python-pip net-tools openssh-server libsox-fmt-mp3 logrotate unixodbc unixodbc-dev gnupg2
 pip install smpplib
+pip install pandas
 pip install pyst2
 pip install requests
 pip install mysql-connector-python
 pip install psycopg2-binary
-pip install sqlalchemy
+pip install sqlalchemy==1.3.20
 pip install pytz
 pip install kafka-python
 
